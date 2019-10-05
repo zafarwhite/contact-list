@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import ContactList from './components/ContactList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    title: 'Contacts',
+    contacts: [
+      {
+        id: 1,
+        name: 'Mark',
+        surname: 'Zuckerberg',
+        phoneNumber: '+1 650 543 4800'
+      },
+      {
+        id: 2,
+        name: 'Larry',
+        surname: 'Page',
+        phoneNumber: 'doesn\'t like to use mobile '
+      },
+      {
+        id: 3,
+        name: 'Sergey',
+        surname: 'Brin',
+        phoneNumber: '+1 216 363-3400'
+      },
+      {
+        id: 4,
+        name: 'Bill',
+        surname: 'Gates',
+        phoneNumber: '+1 206 709 XXXX'
+      },
+    ]
+  }
+  getTitle(){
+    return 'Famous people of web';
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <header className="header">{this.getTitle()}</header>
+        <h1 className="contacts">{this.state.title || 'Anonymus' }:</h1>
+        <ContactList className="contactLength" contacts={this.state.contacts} />
+      </div>
+    )
+  }
 }
-
-export default App;

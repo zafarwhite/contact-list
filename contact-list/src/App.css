@@ -20,3 +20,14 @@
 .App-link {
   color: #09d3ac;
 }
+
+.header {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: darkgoldenrod;
+}
+.contacts{
+  color:goldenrod;
+  font: 700;
+}
