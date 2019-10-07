@@ -1,0 +1,32 @@
+.names, .surname {
+    width: 10vh;
+    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 2px;
+    color: darkolivegreen
+}
+a {
+    text-decoration: none;
+    cursor: alias;
+    color: rgba(52, 38, 114, 0.767)
+}
+a :hover{
+    color: blue;
+    text-decoration: royalblue;
+}
+.items{
+    display: flex;
+    justify-content: space-between;
+    min-height: 4vh;
+    border:2px dotted yellowgreen;
+    border-radius: 50px;
+    margin: 10px;
+}
+.item {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+    width: 20vh;
+}
