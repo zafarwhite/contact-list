@@ -51,7 +51,7 @@ export default class App extends Component {
     return (
       <div className="container">
         <header className="header">{this.getTitle()}</header>
-        <h1 className="contacts">{this.state.title || 'Anonymus' }:</h1>
+        <h1 className="contacts">{this.state.title}:</h1>
         <ContactList className="contactLength" contacts={this.state.contacts} />
       </div>
     )
